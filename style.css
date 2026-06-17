@@ -1,0 +1,172 @@
+/* Base Reset Elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #ffffff;
+    color: #444444;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Horizontal Top Header Layout */
+.top-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    letter-spacing: -0.5px;
+}
+
+/* Top Horizontal Navigation Links */
+.top-nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666666;
+    transition: color 0.2s ease;
+    padding: 6px 0;
+    position: relative; /* Setup anchor point for the underline indicator */
+}
+
+.nav-item:hover {
+    color: #111111;
+}
+
+/* Cleaner Active State that doesn't push elements around */
+.nav-item.active {
+    color: #111111;
+    font-weight: 600;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #111111; /* Sleek underline matching lecturer theme */
+}
+
+/* Two-Column Distribution Container */
+.portfolio-container {
+    display: flex;
+    max-width: 1140px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+    gap: 60px;
+}
+
+/* Left Image Column Box */
+.profile-column {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%; /* Generates the identical large circular mask */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-location {
+    font-size: 0.85rem;
+    color: #777777;
+}
+
+/* Right Content Column Layout */
+.content-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Typography Inside Main Section */
+.content-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Content Information Cards (For experience & projects pages) */
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #eef0f2;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+/* Layout Adaptation for Mobile Screens */
+@media (max-width: 800px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .top-nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .profile-column {
+        flex: none;
+        width: 100%;
+    }
+}
