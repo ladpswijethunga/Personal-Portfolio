@@ -53,14 +53,14 @@ body {
     color: #666666;
     transition: color 0.2s ease;
     padding: 6px 0;
-    position: relative; /* Setup anchor point for the underline indicator */
+    position: relative; /* Setup anchor point for the absolute underline */
 }
 
 .nav-item:hover {
     color: #111111;
 }
 
-/* Cleaner Active State that doesn't push elements around */
+/* Refined Stable Active Navigation Layout */
 .nav-item.active {
     color: #111111;
     font-weight: 600;
@@ -73,7 +73,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #111111; /* Sleek underline matching lecturer theme */
+    background-color: #111111;
 }
 
 /* Two-Column Distribution Container */
@@ -101,9 +101,91 @@ body {
     margin-bottom: 20px;
 }
 
-.profile-location {
+/* Sidebar Profile Metadata Info Box Style */
+.profile-meta-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.meta-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #444444;
+    text-align: left;
+}
+
+.meta-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.meta-text a {
+    color: #444444;
+    text-decoration: none;
+}
+
+.meta-text a:hover {
+    color: #111111;
+    text-decoration: underline;
+}
+
+/* Sidebar Line Spacers */
+.sidebar-divider {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 20px 0;
+}
+
+/* Link Groups Architecture Blocks */
+.links-group {
+    width: 100%;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.links-group-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 16px;
+}
+
+.sidebar-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar-links-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #444444;
+    transition: color 0.2s ease;
+}
+
+.sidebar-links-list li a:hover {
+    color: #111111;
+}
+
+.arrow-icon {
     font-size: 0.85rem;
-    color: #777777;
+    color: #999999;
+    transition: color 0.2s ease;
+}
+
+.sidebar-links-list li a:hover .arrow-icon {
+    color: #111111;
 }
 
 /* Right Content Column Layout */
@@ -168,5 +250,176 @@ body {
     .profile-column {
         flex: none;
         width: 100%;
+    }
+}
+
+/* Brand Vector Icon Formatting Rules */
+.sidebar-links-list .link-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-logo-icon {
+    width: 16px;
+    height: 16px;
+    transition: fill 0.2s ease;
+    display: inline-block;
+}
+
+/* Specific Brand Colors for Logos */
+.linkedin-icon {
+    fill: #0a66c2; /* Official LinkedIn Blue */
+}
+
+.github-icon {
+    fill: #24292e; /* Official GitHub Dark Gray */
+}
+
+/* Elegant color transitions when hovering over rows */
+.sidebar-links-list li a:hover .linkedin-icon {
+    fill: #004182; /* Deepens the blue on hover */
+}
+
+.sidebar-links-list li a:hover .github-icon {
+    fill: #000000; /* Darkens to pure black on hover */
+}
+
+/* ==========================================================================
+   NEW ADDITIONS: Timeline Architecture & Graphical Skills Grid
+   ========================================================================== */
+
+/* Timeline Layout for Education Milestones */
+.timeline {
+    position: relative;
+    padding-left: 24px;
+    border-left: 2px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+/* Custom indicator node elements mimicking modern CVs */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #111111;
+    z-index: 2;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.item-role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111111;
+}
+
+/* Timeline Custom Status Badges */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.badge-present {
+    background-color: #e6f4ea;
+    color: #137333;
+}
+
+.item-institution {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.item-details {
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+/* Technical Skills Tool Matrix Design */
+.skills-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 30px 20px;
+    margin-top: 25px;
+    justify-items: center;
+}
+
+.skills-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.skill-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.05));
+    transition: transform 0.2s ease;
+}
+
+.skills-icon-item:hover .skill-logo {
+    transform: translateY(-4px);
+}
+
+.skill-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444444;
+}
+
+/* Fallback structural styling for custom scientific software icon modules */
+.fallback-skill-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease;
+    background-color: #ffffff;
+}
+
+.math-orange { border-color: #ffe0cc; background-color: #fff5f0; }
+.physics-blue { border-color: #d0e8ff; background-color: #f2f8ff; }
+.xampp-orange { border-color: #ffd8be; background-color: #fff9f5; }
+
+.skills-icon-item:hover .fallback-skill-icon {
+    transform: translateY(-4px);
+}
+
+/* Responsive adjustment breakpoints for icons in mobile viewport views */
+@media (max-width: 480px) {
+    .skills-icon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 10px;
     }
 }
