@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- Horizontal Top Header (Matches image_51fca9.png) -->
+    <!-- Horizontal Top Header -->
     <header class="top-header">
         <div class="header-container">
             <div class="header-brand">
@@ -17,7 +17,6 @@
             </div>
             <nav class="top-nav">
                 <a href="index.html" class="nav-item active">Home</a>
-                <a href="education.html" class="nav-item">Education</a>
                 <a href="experience.html" class="nav-item">Experience</a>
                 <a href="projects.html" class="nav-item">Projects</a>
                 <a href="cv.html" class="nav-item">CV</a>
@@ -29,9 +28,13 @@
     <!-- Two-Column Body Content Split -->
     <div class="portfolio-container">
         
-        <!-- Left Column: Expanded Profile Sidebar (Matches image_173838.png) -->
+        <!-- Left Column: Synchronized Profile Sidebar -->
         <aside class="profile-column">
-            <img src="sanjana1.jpeg" alt="Sanjana" class="profile-img">
+            <!-- Highlighted Profile Photo Feature -->
+            <img src="sanjana1.jpeg" alt="Sanjana" class="profile-img" 
+                 style="border: 3px solid #005ca9; padding: 6px; background-color: #ffffff; box-shadow: 0 10px 25px rgba(0, 92, 169, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease; display: block; margin-bottom: 20px;"
+                 onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 12px 30px rgba(0, 92, 169, 0.25)';"
+                 onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 25px rgba(0, 92, 169, 0.15)';">
             
             <!-- Metadata Details Grid Block -->
             <div class="profile-meta-box">
@@ -45,7 +48,7 @@
                 </div>
                 <div class="meta-row">
                     <span class="meta-icon">✉️</span>
-                    <span class="meta-text"><a href="as20240969@sci.sjp.ac.lk">sanjana@usj.com</a></span>
+                    <span class="meta-text"><a href="mailto:sanjana@example.com">sanjana@example.com</a></span>
                 </div>
             </div>
 
@@ -68,7 +71,7 @@
                         </a>
                     </li>
                     <li>
-                        <!-- Updated GitHub Profile Link and Vector Icon -->
+                        <!-- GitHub Profile Link -->
                         <a href="https://github.com/ladpswijethunga" target="_blank">
                             <span class="link-label">
                                 <svg class="brand-logo-icon github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -83,22 +86,157 @@
             </div>
         </aside>
 
-        <!-- Right Column: Scrollable Text Content -->
+        <!-- Right Column: Scrollable Content Stream -->
         <main class="content-column">
-            <section class="about-section">
-                <h2 class="content-title">About</h2>
-                <p class="about-text">
-                    I am a dynamic and collaborative <b>Physical Science (ICT) undergraduate</b> within the <b>Faculty of Applied Sciences</b> at the <b>University of Sri Jayewardenepura</b>, backed by a strong foundation in Mathematics and Physics. As an extroverted communicator, I thrive in team-oriented environments and enjoy working directly with people to solve complex structural problems.
+            
+            <!-- Welcome / About Me Card -->
+            <h2 class="content-title">About Me</h2>
+            <div class="info-card" style="border: 2px solid #005ca9; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02); padding: 24px; border-radius: 8px; background-color: #ffffff; margin-bottom: 25px;">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: #333333; margin: 0;">
+                    Hello! I'm an enthusiastic undergraduate student passionate about bridging the gap between hardware functionality and software design. With a strong academic background in physical sciences and technical problem-solving, I enjoy building structured systems, working with relational databases, and writing clean code to tackle real-world challenges. Explore my academic milestones and toolkits below!
                 </p>
-                <p class="about-text">
-                   I combine strong analytical reasoning with a solid understanding of software lifecycles, database management, and DevOps pipelines to effectively bridge the gap between technical teams and human-centered business solutions.
-                </p>
-                <p class="about-text">
-                    Alongside my studies, I am actively building practical technical projects, focusing heavily on object-oriented programming concepts and relational database architecture to prepare for enterprise software environments.
-                </p>
-            </section>
-        </main>
+            </div>
 
+            <!-- Education Timeline Card -->
+            <h2 class="content-title">Education</h2>
+            <div class="info-card" style="border: 2px solid #005ca9; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02); padding: 24px; border-radius: 8px; background-color: #ffffff; margin-bottom: 25px;">
+                <div class="timeline">
+                    
+                    <!-- University Entry -->
+                    <div class="timeline-item">
+                        <div class="item-header">
+                            <span class="item-role">🎓 Physical Science(ICT) Student</span>
+                            <span class="badge badge-present">Present</span>
+                        </div>
+                        <p class="item-institution">University of Sri Jayewardenepura Undergraduate (Second Year)</p>
+                        <p class="item-details">
+                            Deepening core competencies in system architectures, algorithmic development, relational data designs, and applied computing frameworks.
+                        </p>
+                    </div>
+
+                    <!-- Secondary Education Entry -->
+                    <div class="timeline-item" style="margin-top: 30px;">
+                        <div class="item-header">
+                            <span class="item-role">🏫 Secondary Education</span>
+                            <span class="badge" style="background-color: #f5f5f5; color: #666666; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">Completed</span>
+                        </div>
+                        <p class="item-institution">[Insert Your School Name Here]</p>
+                        <p class="item-details">
+                            G.C.E. Advanced Level — Physical Science Stream. <br>
+                            Focused on building strong analytical and problem-solving fundamentals in Combined Mathematics, Physics, and Information and Communication Technology (ICT).
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Technical Skills and Tools Card -->
+            <h2 class="content-title">Technical Skills & Tools</h2>
+            <div class="info-card" style="border: 2px solid #005ca9; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02); padding: 24px; border-radius: 8px; background-color: #ffffff;">
+                <div class="skills-icon-grid">
+                    <!-- Python -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo">
+                        <span class="skill-name">Python</span>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-logo">
+                        <span class="skill-name">Java</span>
+                    </div>
+
+                    <!-- MATLAB -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB" class="skill-logo">
+                        <span class="skill-name">MATLAB</span>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-logo">
+                        <span class="skill-name">MySQL</span>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo">
+                        <span class="skill-name">Git</span>
+                    </div>
+
+                    <!-- Maple -->
+                    <div class="skills-icon-item">
+                        <svg class="skill-logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="44" height="44" rx="4" fill="#ffffff"/>
+                            <path d="M24 6l2.1 5.3 5.4-3.1-.9 5.8 5.8-1.2-3.3 4.8 5.4.3-6.1 2.5 1.5 5.6-5.9-2.3V38h-4V29.3l-5.9 2.3 1.5-5.6-6.1-2.5 5.4-.3-3.3-4.8 5.8 1.2-.9-5.8 5.4 3.1L24 6z" fill="#c00000"/>
+                            <rect x="14" y="14" width="20" height="20" rx="6" fill="#b41b1b" stroke="#ffffff" stroke-width="1.5"/>
+                            <text x="24" y="28" fill="#ffffff" font-family="'Inter', sans-serif" font-weight="800" font-size="12" text-anchor="middle">12</text>
+                        </svg>
+                        <span class="skill-name">Maple</span>
+                    </div>
+
+                    <!-- VS Code -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo">
+                        <span class="skill-name">VS Code</span>
+                    </div>
+
+                    <!-- NetBeans -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netbeans/netbeans-original.svg" alt="NetBeans" class="skill-logo">
+                        <span class="skill-name">NetBeans</span>
+                    </div>
+
+                    <!-- XAMPP -->
+                    <div class="skills-icon-item">
+                        <img src="https://logowik.com/content/uploads/images/t_xampp1895.jpg" alt="XAMPP" class="skill-logo" style="width: 72px; height: 72px; max-width: none; max-height: none; margin: -12px 0;">
+                        <span class="skill-name">XAMPP</span>
+                    </div>
+
+                    <!-- HTML5 -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo">
+                        <span class="skill-name">HTML5</span>
+                    </div>
+
+                    <!-- React -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-logo">
+                        <span class="skill-name">React</span>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo">
+                        <span class="skill-name">CSS3</span>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo">
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="skills-icon-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-logo">
+                        <span class="skill-name">Docker</span>
+                    </div>
+
+                    <!-- PASCO Capstone -->
+                    <div class="skills-icon-item">
+                        <svg class="skill-logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="width: 46px; height: 46px; margin: 1px 0;">
+                            <path d="M6 30l18 8 18-8v6l-18 8-18-8v-6z" fill="#005ca9"/>
+                            <path d="M24 38l18-8v6l-18 8v-6z" fill="#004682"/>
+                            <polygon points="6,30 24,12 42,30 24,38" fill="#e6e6e6"/>
+                            <polygon points="24,12 42,30 24,38" fill="#cccccc"/>
+                            <polygon points="6,30 24,12 24,38" fill="#f2f2f2"/>
+                        </svg>
+                        <span class="skill-name">PASCO Capstone</span>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
 </body>
