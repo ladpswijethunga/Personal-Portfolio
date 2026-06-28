@@ -16,36 +16,84 @@
                 <span class="brand-name">Sanjana Wijethunga</span>
             </div>
             <nav class="top-nav">
-    <a href="index.html" class="nav-item">Home</a>
-    <a href="education.html" class="nav-item">Education</a>
-    <a href="experience.html" class="nav-item">Experience</a>
-    <a href="projects.html" class="nav-item active">Projects</a>
-    <a href="cv.html" class="nav-item">CV</a>
-    <a href="contact.html" class="nav-item">Contact</a>
-</nav>
+                <a href="index.html" class="nav-item">Home</a>
+                
+                <a href="experience.html" class="nav-item">Experience</a>
+                <a href="projects.html" class="nav-item active">Projects</a>
+                <a href="education.html" class="nav-item">Education</a>
+                <a href="cv.html" class="nav-item">CV</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
         </div>
     </header>
 
+    <!-- Two-Column Body Content Split -->
     <div class="portfolio-container">
+        
+        <!-- Left Column: Profile Sidebar -->
         <aside class="profile-column">
-            <img src="sanjana1.jpeg" alt="Sanjana" class="profile-img">
+            <img src="sanjana1.jpeg" alt="Sanjana" class="profile-img custom-photo-highlight" 
+                 onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 12px 30px rgba(0, 92, 169, 0.25)';"
+                 onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 25px rgba(0, 92, 169, 0.15)';">
             <div class="profile-location">📍 Gampaha, Sri Lanka</div>
         </aside>
 
+        <!-- Right Column: Scrollable Content Stream -->
         <main class="content-column">
             <h2 class="content-title">Academic & Personal Projects</h2>
             
-            <div class="info-card">
-                <ul class="projects-list">
-                    <li style="margin-bottom: 25px; list-style: none;">
-                        <strong style="font-size: 1.1rem; color: #111;">Retail Sales Management System</strong>
-                        <p style="margin-top: 5px; color: #555;">A desktop sales system utilizing Java Swing for the graphical interface and MySQL for database operations, implementing the Data Access Object (DAO) pattern.</p>
-                    </li>
-                    <li style="list-style: none;">
-                        <strong style="font-size: 1.1rem; color: #111;">Student Record Manager</strong>
-                        <p style="margin-top: 5px; color: #555;">A desktop application designed to securely manage student administrative metrics, tracked and maintained using Git version control tools.</p>
-                    </li>
-                </ul>
+            <div class="projects-wrapper">
+                
+                <!-- Project 1: Retail Sales Management System (First Year Final Project) -->
+                <div class="custom-project-card featured-project">
+                    <div class="project-header-row">
+                        <h3 class="project-card-title">🛍️ Retail Sales Management System</h3>
+                        <div class="project-badge-container">
+                            <span class="p-badge b-featured">Featured</span>
+                            <span class="p-badge b-academic">Final Project</span>
+                        </div>
+                    </div>
+                    <p class="project-card-subtitle">ICT 1062 — First Year Final Assignment</p>
+                    <p class="project-card-text">
+                        A desktop sales application built utilizing Java Swing and MySQL database engines, structured using a strict 3-Tier MVC architecture and Data Access Object (DAO) pattern to automate retail transactions, run live stock level deduction logic, and maintain secure authentication scripts[cite: 2].
+                    </p>
+                    <div class="project-tags-deck">
+                        <span class="tech-tag">Java Swing</span>
+                        <span class="tech-tag">3-Tier Architecture</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">DAO / Singleton</span>
+                        <span class="tech-tag">JDBC</span>
+                    </div>
+                    <div class="project-action-bar">
+                        <a href="retail-sales-detail.html" class="project-btn-primary">View Case Study →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Logistic Management System (First Semester Project) -->
+                <div class="custom-project-card">
+                    <div class="project-header-row">
+                        <h3 class="project-card-title">📦 Logistic Management System</h3>
+                        <div class="project-badge-container">
+                            <span class="p-badge b-academic">Assignment</span>
+                        </div>
+                    </div>
+                    <p class="project-card-subtitle">ICT 1011 — First Year, First Semester Assignment</p>
+                    <p class="project-card-text">
+                        A modular, menu-driven desktop delivery tracking application engineered to dynamically manage symmetrical 2D distance matrices across physical nodes, process multi-variable cost estimation profiles, and execute automated flat-file data serialization[cite: 1].
+                    </p>
+                    <div class="project-tags-deck">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">OOP Logic</span>
+                        <span class="tech-tag">2D Array Matrices</span>
+                        <span class="tech-tag">File I/O</span>
+                        <span class="tech-tag">Git</span>
+                    </div>
+                    <div class="project-action-bar">
+                        <a href="project-detail.html" class="project-btn-primary">View Case Study →</a>
+                        <a href="https://github.com/ladpswijethunga/project1" target="_blank" class="project-btn-secondary">GitHub ↗</a>
+                    </div>
+                </div>
+
             </div>
         </main>
     </div>
