@@ -1,3 +1,33 @@
+/* ==========================================
+   THEMING DESIGN VARIABLES 
+   ========================================== */
+
+/* Light Mode Theme Rules */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --text-nav: #666666;
+    --card-bg: #ffffff;
+    --border-color: #eaeaea;
+    --accent-blue: #005ca9;
+    --card-border: #e2e8f0;
+}
+
+/* Dark Mode Theme Rules Override */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;       /* Deep slate background */
+    --bg-secondary: #1e293b;     /* Darker slate panels */
+    --text-main: #f8fafc;        /* High contrast bright text */
+    --text-muted: #94a3b8;       /* Readable soft grey text */
+    --text-nav: #cbd5e1;         /* Bright navigation items */
+    --card-bg: #1e293b;          /* Sleek inner dark cards */
+    --border-color: #334155;     /* Dark accent seam borders */
+    --accent-blue: #38bdf8;      /* Vibrant high-contrast electric blue */
+    --card-border: #334155;
+}
+
 /* Base Reset Elements */
 * {
     margin: 0;
@@ -7,20 +37,22 @@
 
 body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background-color: #ffffff;
-    color: #444444;
+    background-color: var(--bg-primary);
+    color: var(--text-muted);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Horizontal Top Header Layout */
 .top-header {
     width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .header-container {
@@ -35,7 +67,7 @@ body {
 .brand-name {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--text-main);
     letter-spacing: -0.5px;
 }
 
@@ -50,19 +82,19 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    color: #666666;
+    color: var(--text-nav);
     transition: color 0.2s ease;
     padding: 6px 0;
-    position: relative; /* Setup anchor point for the absolute underline */
+    position: relative; 
 }
 
 .nav-item:hover {
-    color: #111111;
+    color: var(--text-main);
 }
 
 /* Refined Stable Active Navigation Layout */
 .nav-item.active {
-    color: #111111;
+    color: var(--text-main);
     font-weight: 600;
 }
 
@@ -73,7 +105,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #111111;
+    background-color: var(--text-main);
 }
 
 /* Two-Column Distribution Container */
@@ -83,6 +115,7 @@ body {
     margin: 40px auto 0 auto;
     padding: 0 20px;
     gap: 60px;
+    background-color: var(--bg-primary);
 }
 
 /* Left Image Column Box */
@@ -96,7 +129,7 @@ body {
 .profile-img {
     width: 260px;
     height: 260px;
-    border-radius: 50%; /* Generates the identical large circular mask */
+    border-radius: 50%; 
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -116,7 +149,7 @@ body {
     align-items: flex-start;
     gap: 12px;
     font-size: 0.9rem;
-    color: #444444;
+    color: var(--text-muted);
     text-align: left;
 }
 
@@ -126,12 +159,12 @@ body {
 }
 
 .meta-text a {
-    color: #444444;
+    color: var(--text-muted);
     text-decoration: none;
 }
 
 .meta-text a:hover {
-    color: #111111;
+    color: var(--text-main);
     text-decoration: underline;
 }
 
@@ -139,7 +172,7 @@ body {
 .sidebar-divider {
     width: 100%;
     border: 0;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--border-color);
     margin: 20px 0;
 }
 
@@ -153,7 +186,7 @@ body {
 .links-group-title {
     font-size: 1rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--text-main);
     margin-bottom: 16px;
 }
 
@@ -170,22 +203,22 @@ body {
     align-items: center;
     text-decoration: none;
     font-size: 0.95rem;
-    color: #444444;
+    color: var(--text-muted);
     transition: color 0.2s ease;
 }
 
 .sidebar-links-list li a:hover {
-    color: #111111;
+    color: var(--text-main);
 }
 
 .arrow-icon {
     font-size: 0.85rem;
-    color: #999999;
+    color: var(--text-nav);
     transition: color 0.2s ease;
 }
 
 .sidebar-links-list li a:hover .arrow-icon {
-    color: #111111;
+    color: var(--text-main);
 }
 
 /* Right Content Column Layout */
@@ -200,29 +233,30 @@ body {
 .content-title {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--text-main);
     margin-bottom: 25px;
 }
 
 .about-text {
     font-size: 1rem;
-    color: #555555;
+    color: var(--text-muted);
     margin-bottom: 20px;
     text-align: left;
 }
 
-/* Content Information Cards (For experience & projects pages) */
+/* Content Information Cards */
 .info-card {
-    background-color: #ffffff;
-    border: 1px solid #eef0f2;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 28px;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .card-title {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--text-main);
     margin-bottom: 20px;
 }
 
@@ -269,31 +303,22 @@ body {
 
 /* Specific Brand Colors for Logos */
 .linkedin-icon {
-    fill: #0a66c2; /* Official LinkedIn Blue */
+    fill: #0a66c2; 
 }
 
 .github-icon {
-    fill: #24292e; /* Official GitHub Dark Gray */
+    fill: var(--text-main); /* Dynamically scales down tracking fields safely */
 }
 
-/* Elegant color transitions when hovering over rows */
 .sidebar-links-list li a:hover .linkedin-icon {
-    fill: #004182; /* Deepens the blue on hover */
+    fill: #004182; 
 }
-
-.sidebar-links-list li a:hover .github-icon {
-    fill: #000000; /* Darkens to pure black on hover */
-}
-
-/* ==========================================================================
-   NEW ADDITIONS: Timeline Architecture & Graphical Skills Grid
-   ========================================================================== */
 
 /* Timeline Layout for Education Milestones */
 .timeline {
     position: relative;
     padding-left: 24px;
-    border-left: 2px solid #eaeaea;
+    border-left: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
 }
@@ -302,7 +327,6 @@ body {
     position: relative;
 }
 
-/* Custom indicator node elements mimicking modern CVs */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -311,8 +335,8 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #ffffff;
-    border: 2px solid #111111;
+    background-color: var(--bg-primary);
+    border: 2px solid var(--text-main);
     z-index: 2;
 }
 
@@ -328,7 +352,7 @@ body {
 .item-role {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #111111;
+    color: var(--text-main);
 }
 
 /* Timeline Custom Status Badges */
@@ -344,16 +368,21 @@ body {
     color: #137333;
 }
 
+[data-theme="dark"] .badge-present {
+    background-color: #064e3b;
+    color: #34d399;
+}
+
 .item-institution {
     font-size: 0.95rem;
     font-weight: 500;
-    color: #666666;
+    color: var(--text-muted);
     margin-bottom: 8px;
 }
 
 .item-details {
     font-size: 0.95rem;
-    color: #555555;
+    color: var(--text-muted);
 }
 
 /* Technical Skills Tool Matrix Design */
@@ -390,10 +419,10 @@ body {
 .skill-name {
     font-size: 0.85rem;
     font-weight: 500;
-    color: #444444;
+    color: var(--text-muted);
 }
 
-/* Fallback structural styling for custom scientific software icon modules */
+/* Fallback structural styling for custom software icons */
 .fallback-skill-icon {
     width: 48px;
     height: 48px;
@@ -403,20 +432,23 @@ body {
     justify-content: center;
     font-size: 1.6rem;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.06);
-    border: 1px solid #f0f0f0;
+    border: 1px solid var(--border-color);
     transition: transform 0.2s ease;
-    background-color: #ffffff;
+    background-color: var(--card-bg);
 }
 
 .math-orange { border-color: #ffe0cc; background-color: #fff5f0; }
 .physics-blue { border-color: #d0e8ff; background-color: #f2f8ff; }
 .xampp-orange { border-color: #ffd8be; background-color: #fff9f5; }
 
+[data-theme="dark"] .math-orange { background-color: #431407; border-color: #7c2d12; }
+[data-theme="dark"] .physics-blue { background-color: #1e3a8a; border-color: #1e40af; }
+[data-theme="dark"] .xampp-orange { background-color: #451a03; border-color: #78350f; }
+
 .skills-icon-item:hover .fallback-skill-icon {
     transform: translateY(-4px);
 }
 
-/* Responsive adjustment breakpoints for icons in mobile viewport views */
 @media (max-width: 480px) {
     .skills-icon-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -425,18 +457,15 @@ body {
 }
 
 /* --- Custom Project Showcase Elements --- */
-
-/* Photo Highlight Framework */
 .custom-photo-highlight {
-    border: 3px solid #005ca9;
+    border: 3px solid var(--accent-blue);
     padding: 6px;
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
     box-shadow: 0 10px 25px rgba(0, 92, 169, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
 }
 
-/* Card Outer Containers */
 .projects-wrapper {
     display: flex;
     flex-direction: column;
@@ -445,26 +474,22 @@ body {
 }
 
 .custom-project-card {
-    background-color: #ffffff;
-    border: 2px solid #e2e8f0;
+    background-color: var(--card-bg);
+    border: 2px solid var(--card-border);
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Highlighted Main Profile Card Accent */
 .custom-project-card.featured-project {
-    border-color: #005ca9;
-    box-shadow: 0 4px 14px rgba(0, 92, 169, 0.03);
+    border-color: var(--accent-blue);
 }
 
 .custom-project-card:hover {
-    border-color: #005ca9;
-    box-shadow: 0 6px 18px rgba(0, 92, 169, 0.06);
+    border-color: var(--accent-blue);
 }
 
-/* Header Text Alignments */
 .project-header-row {
     display: flex;
     justify-content: space-between;
@@ -477,25 +502,23 @@ body {
 .project-card-title {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #111111;
-    margin: 0;
+    color: var(--text-main);
 }
 
 .project-card-subtitle {
     font-size: 0.88rem;
     font-weight: 600;
-    color: #005ca9;
+    color: var(--accent-blue);
     margin: 0 0 12px 0;
 }
 
 .project-card-text {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #444444;
+    color: var(--text-muted);
     margin: 0 0 16px 0;
 }
 
-/* Dynamic Tag Array Deck */
 .project-tags-deck {
     display: flex;
     flex-wrap: wrap;
@@ -507,12 +530,11 @@ body {
     font-size: 0.8rem;
     font-weight: 500;
     padding: 4px 10px;
-    background-color: #f4f6f8;
-    color: #555555;
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
     border-radius: 4px;
 }
 
-/* Micro Badge Layout Elements */
 .project-badge-container {
     display: flex;
     gap: 6px;
@@ -524,25 +546,24 @@ body {
     text-transform: uppercase;
     padding: 3px 8px;
     border-radius: 4px;
-    background-color: #f1f5f9;
-    color: #475569;
+    background-color: var(--bg-secondary);
+    color: var(--text-muted);
 }
 
 .p-badge.b-featured {
-    background-color: #111111;
-    color: #ffffff;
+    background-color: var(--text-main);
+    color: var(--bg-primary);
 }
 
 .p-badge.b-academic {
-    background-color: #e3f2fd;
-    color: #005ca9;
+    background-color: var(--bg-secondary);
+    color: var(--accent-blue);
 }
 
-/* Interactive Action Triggers */
 .project-action-bar {
     display: flex;
     gap: 12px;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid var(--border-color);
     padding-top: 16px;
     margin-top: 8px;
 }
@@ -550,7 +571,7 @@ body {
 .project-btn-primary {
     font-size: 0.88rem;
     font-weight: 600;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #005ca9;
     padding: 6px 14px;
     border-radius: 6px;
@@ -565,10 +586,10 @@ body {
 .project-btn-secondary {
     font-size: 0.88rem;
     font-weight: 600;
-    color: #005ca9;
+    color: var(--accent-blue);
     background-color: transparent;
     padding: 6px 14px;
-    border: 1px solid #005ca9;
+    border: 1px solid var(--accent-blue);
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -579,15 +600,11 @@ body {
 }
 
 /* ==========================================================================
-   Case Study Detail Page Layout Styles (For project-detail.html)
+   Case Study Detail Page Layout Styles
    ========================================================================== */
-
 .case-study-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    color: #111111;
-    margin: 0;
-    padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
 }
 
 .case-study-wrapper {
@@ -601,7 +618,7 @@ body {
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: #444444;
+    color: var(--text-muted);
     font-weight: 600;
     font-size: 0.95rem;
     margin-bottom: 24px;
@@ -609,22 +626,18 @@ body {
 }
 
 .back-link:hover {
-    color: #005ca9;
+    color: var(--accent-blue);
 }
 
 .breadcrumbs {
     font-size: 0.85rem;
-    color: #777777;
+    color: var(--text-muted);
     margin-bottom: 20px;
 }
 
 .breadcrumbs a {
-    color: #777777;
+    color: var(--text-muted);
     text-decoration: none;
-}
-
-.breadcrumbs a:hover {
-    text-decoration: underline;
 }
 
 .badge-row {
@@ -638,15 +651,15 @@ body {
     font-weight: 600;
     padding: 4px 12px;
     border-radius: 20px;
-    border: 1px solid #dddddd;
-    color: #333333;
-    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    background: var(--card-bg);
 }
 
 .pill-badge.featured {
-    background-color: #111111;
-    color: #ffffff;
-    border-color: #111111;
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+    border-color: var(--text-main);
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -657,16 +670,8 @@ body {
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.15;
-    color: #111111;
+    color: var(--text-main);
     margin: 0 0 16px 0;
-}
-
-.meta-row {
-    display: flex;
-    gap: 20px;
-    font-size: 0.9rem;
-    color: #666666;
-    margin-bottom: 30px;
 }
 
 .meta-item {
@@ -708,27 +713,17 @@ body {
     z-index: 2;
 }
 
-.hero-graphic-decoration {
-    position: absolute;
-    right: -20px;
-    bottom: -20px;
-    opacity: 0.12;
-    width: 320px;
-    height: 320px;
-    fill: #ffffff;
-}
-
 .abstract-text {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #444444;
+    color: var(--text-muted);
     margin-bottom: 35px;
 }
 
 .section-heading {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--text-main);
     margin: 0 0 16px 0;
     letter-spacing: -0.01em;
 }
@@ -736,7 +731,7 @@ body {
 .body-text {
     font-size: 1rem;
     line-height: 1.65;
-    color: #333333;
+    color: var(--text-main);
     margin-bottom: 30px;
 }
 
@@ -746,28 +741,30 @@ body {
     gap: 8px;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .tech-pill {
     font-size: 0.85rem;
     font-weight: 500;
     padding: 6px 14px;
-    background-color: #f4f6f8;
-    color: #444444;
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
     border-radius: 6px;
-}
-
-.highlights-list {
-    padding-left: 20px;
-    margin: 0;
 }
 
 .highlights-list li {
     font-size: 1rem;
     line-height: 1.65;
-    color: #333333;
+    color: var(--text-muted);
     margin-bottom: 12px;
+}
+
+/* Input Forms Clean Mapping */
+input, textarea {
+    background-color: var(--card-bg) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color) !important;
 }
 
 /* Interactive GitHub Action CTA Button */
@@ -777,8 +774,8 @@ body {
     gap: 10px;
     font-size: 0.95rem;
     font-weight: 600;
-    color: #ffffff;
-    background-color: #111111;
+    color: var(--bg-primary);
+    background-color: var(--text-main);
     padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
@@ -786,6 +783,60 @@ body {
 }
 
 .github-cta-btn:hover {
-    background-color: #005ca9;
+    background-color: var(--accent-blue);
     transform: translateY(-2px);
+}
+
+/* Navigation Theme Button (Perfect Alignment Rule) */
+.theme-btn {
+    background: none !important;
+    border: none !important;
+    font-size: 1rem;            
+    color: var(--text-main);    
+    cursor: pointer;
+    padding: 0;
+    margin-left: 12px;          
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    transition: opacity 0.2s ease;
+}
+
+.theme-btn:hover {
+    opacity: 0.7;
+    transform: none !important; 
+}
+
+/* ==========================================
+   HEAVY-DUTY FIX FOR THE LARGE WHITE BLOCKS
+   ========================================== */
+
+/* Forces the main layout columns and their inner blocks to turn dark */
+[data-theme="dark"] .content-column > div,
+[data-theme="dark"] .blog-wrapper,
+[data-theme="dark"] .blog-content,
+[data-theme="dark"] .main-content,
+[data-theme="dark"] .info-card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+/* Forces any white container surfaces on the home or experience pages to shift */
+[data-theme="dark"] div[style*="background-color: #ffffff"],
+[data-theme="dark"] div[style*="background-color:#ffffff"] {
+    background-color: var(--card-bg) !important;
+}
+
+/* Fixes text elements inside that container to make sure they are readable */
+[data-theme="dark"] .content-column > div *,
+[data-theme="dark"] .blog-wrapper * {
+    color: var(--text-main);
+}
+
+/* Keeps subtle paragraph/description texts muted for good contrast */
+[data-theme="dark"] .content-column p,
+[data-theme="dark"] .content-column span,
+[data-theme="dark"] .about-text {
+    color: var(--text-muted) !important;
 }

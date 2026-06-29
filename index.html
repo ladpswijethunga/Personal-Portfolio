@@ -1,6 +1,12 @@
-<!DOCTYPE html>
+< html>
 <html lang="en">
 <head>
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+</head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanjana Wijethunga | Home</title>
@@ -22,6 +28,7 @@
                 <a href="Blogs.html" class="nav-item">Blogs</a>
                 <a href="cv.html" class="nav-item">CV</a>
                 <a href="contact.html" class="nav-item">Contact</a>
+                <button id="theme-toggle" class="theme-btn">🌙</button>
             </nav>
         </div>
     </header>
@@ -240,5 +247,11 @@
         </main>
     </div>
 
+    <br>
+    <br>
+       <footer class="main-footer" align="center">
+        <p>Copyright &copy; 2026 Sanjana Wijethunga. All Rights Reserved.</p>
+    </footer>
+        <script src="script.js"></script>
 </body>
 </html>
