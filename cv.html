@@ -16,32 +16,156 @@
                 <span class="brand-name">Sanjana Wijethunga</span>
             </div>
             <nav class="top-nav">
-    <a href="index.html" class="nav-item">Home</a>
-    <a href="experience.html" class="nav-item">Experience</a>
-    <a href="projects.html" class="nav-item">Projects</a>
-     <a href="Blogs.html" class="nav-item">Blogs</a>
-    <a href="cv.html" class="nav-item active">CV</a>
-    <a href="contact.html" class="nav-item">Contact</a>
-</nav>
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="experience.html" class="nav-item">Experience</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="blog.html" class="nav-item">Blog</a>
+                <a href="cv.html" class="nav-item active">CV</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
         </div>
     </header>
 
+    <!-- Two-Column Body Content Split -->
     <div class="portfolio-container">
+        
+        <!-- Left Column: Profile Sidebar -->
         <aside class="profile-column">
-            <img src="sanjana1.jpeg" alt="Sanjana" class="profile-img">
+            <img src="sanjana1.jpeg" alt="Sanjana" class="profile-img custom-photo-highlight" 
+                 onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 12px 30px rgba(0, 92, 169, 0.25)';"
+                 onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 25px rgba(0, 92, 169, 0.15)';">
             <div class="profile-location">📍 Gampaha, Sri Lanka</div>
         </aside>
 
+        <!-- Right Column: Professional CV Stream -->
         <main class="content-column">
             <h2 class="content-title">Curriculum Vitae</h2>
-            <div class="info-card" style="text-align: center; padding: 40px 20px;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">📄</div>
-                <h3 class="card-title" style="margin-bottom: 10px;">Download Full Resume</h3>
-                <p style="color: #666; margin-bottom: 25px; font-size: 0.95rem;">Review a complete document outlining my academic records, operational project milestones, and certifications.</p>
-                <a href="my-cv.pdf" download style="display: inline-block; background-color: #111; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Download CV (PDF)</a>
-            </div>
-        </main>
-    </div>
+            
+            <div class="projects-wrapper">
+                
+                <!-- Section 1: Personal Details Card -->
+                <div class="custom-project-card" style="border-left: 4px solid #005ca9;">
+                    <h3 class="project-card-title" style="margin-top: 0; color: #005ca9;">📝 Personal Details</h3>
+                    <div style="margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+                        <p class="project-card-text" style="margin: 0;"><strong>Full Name:</strong> L.A.D.P.S. Wijethunga</p>
+                        
+                        <p class="project-card-text" style="margin: 0;"><strong>Birth:</strong> 14.12.2004</p>
+                        <p class="project-card-text" style="margin: 0;"><strong>Email:</strong> sanjana@usj.com</p>
+                     
+                        <p class="project-card-text" style="margin: 0;"><strong>GitHub:</strong> github.com/ladpswijethunga</p>
+                    </div>
+                </div>
+
+                <!-- Section 2: About Me Description -->
+                <div class="custom-project-card">
+                    <h3 class="project-card-title" style="margin-top: 0; color: #005ca9;">👤 Professional Summary</h3>
+                    <p class="project-card-text" style="margin-top: 10px; line-height: 1.6;">
+                        An enthusiastic, detail-oriented Information and Communication Technology (ICT) undergraduate with a strong academic foundation in object-oriented software engineering, application architecture, and relational databases[cite: 1, 2]. Possesses excellent public speaking and group presentation capabilities, demonstrated through university event management roles. Adept at translating complex computational requirements into clean, user-centric desktop environments while maintaining collaborative timeline efficiency[cite: 2].
+                    </p>
+                </div>
+
+                <!-- Section 3: Educational Qualifications -->
+                <div class="custom-project-card">
+                    <h3 class="project-card-title" style="margin-top: 0; color: #005ca9;">🎓 Educational Qualifications</h3>
+                    <div style="margin-top: 15px;">
+                        <div class="project-header-row">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; color: #111111; margin: 0;">BSc in Information and Communication Technology</h4>
+                            <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">2025 - Present</span>
+                        </div>
+                        <p class="project-card-subtitle" style="margin-top: 2px; color: #005ca9; font-weight: 500;">University of Sri Jayewardenepura</p>
+                        <p class="project-card-text" style="margin-top: 6px;">
+                            Currently completing Second-year modules with.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Section 4: Organized Technical Skills Card -->
+                <div class="custom-project-card">
+                    <h3 class="project-card-title" style="margin-top: 0; color: #005ca9; margin-bottom: 15px;">🛠️ Professional Skills Matrix</h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div>
+                            <p class="project-card-text" style="margin-bottom: 6px;"><strong>Programming Languages:</strong></p>
+                            <div class="project-tags-deck">
+                                <span class="tech-tag">Java (JDK 21)</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="project-card-text" style="margin-bottom: 6px;"><strong>Databases:</strong></p>
+                            <div class="project-tags-deck">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">XAMPP</span>
+                                <span class="tech-tag">phpMyAdmin</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="project-card-text" style="margin-bottom: 6px;"><strong>Web Technologies:</strong></p>
+                            <div class="project-tags-deck">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="project-card-text" style="margin-bottom: 6px;"><strong>Tools & Libraries:</strong></p>
+                            <div class="project-tags-deck">
+                                <span class="tech-tag">Java Swing API</span>
+                                
+                                <span class="tech-tag">Git / GitHub</span>
+                                <span class="tech-tag">NetBeans IDE</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="project-card-text" style="margin-bottom: 6px;"><strong>Soft Skills:</strong></p>
+                            <div class="project-tags-deck">
+                                <span class="tech-tag">Interpersonal Skills</span>
+                                <span class="tech-tag">Time Management</span>
+                                <span class="tech-tag">Teamwork & Collaboration</span>
+                                <span class="tech-tag">Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Academic Software Projects -->
+                <div class="custom-project-card">
+                    <h3 class="project-card-title" style="margin-top: 0; margin-bottom: 15px; color: #005ca9;">💻 Software Engineering Projects</h3>
+                    
+                    <!-- Project A -->
+                    <div style="margin-bottom: 25px; border-bottom: 1px solid #eeeeee; padding-bottom: 20px;">
+                        <div class="project-header-row">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; color: #111111; margin: 0;">🛍️ Retail Sales Management System</h4>
+                            <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">Final Project</span>
+                        </div>
+                        <p class="project-card-subtitle" style="margin-top: 2px;">Java, MySQL, Java Swing, JDBC, NetBeans IDE[cite: 2]</p>
+                        <ul class="highlights-list" style="margin-top: 10px; padding-left: 20px;">
+                            <li style="margin-bottom: 6px;">Designed and engineered a complete retail sales desktop architecture utilizing a strict <strong>3-Tier MVC pattern</strong> to fully decouple data management layers from presentation controls[cite: 2].</li>
+                            <li style="margin-bottom: 6px;">Integrated secure database communications over JDBC by initializing a unified data hub using the <strong>Singleton Design Pattern</strong> to optimize active memory threads[cite: 2].</li>
+                            <li style="margin-bottom: 6px;">Programmed runtime calculation engines for automated sales tracking metrics, tax estimations (18% Sri Lankan retail VAT parameters), and automated relational invoice compilation[cite: 2].</li>
+                            <li style="margin-bottom: 6px;">Safeguarded processing infrastructure against injection manipulation exploits by implementing exclusively parameterized <strong>PreparedStatements</strong> inside all Data Access Objects (DAOs)[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project B -->
+                    <div>
+                        <div class="project-header-row">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; color: #111111; margin: 0;">📦 Logistic Management System</h4>
+                            <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">Academic Assignment</span>
+                        </div>
+                        <p class="project-card-subtitle" style="margin-top: 2px;">Java Core, Object-Oriented Logic, File Systems[cite: 1]</p>
+                        <ul class="highlights-list" style="margin-top: 10px; padding-left: 20px;">
+                            <li style="margin-bottom: 6px;">Developed an algorithmic terminal-driven tracking framework in Java built to calculate supply chain metrics across physical nodes[cite: 1].</li>
+                            <li style="margin-bottom: 6px;">Utilized custom-built **symmetrical 2D array matrices** to handle city connection tracks and calculate operational route coordinates smoothly[cite: 1].</li>
+                            <li style="margin-bottom: 6px;">Implemented local data persistence parameters using structural input/output serialization streams to update routing nodes across independent system operations[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
 
 </body>
 </html>
